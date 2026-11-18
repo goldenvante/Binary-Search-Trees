@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binary Search Tree</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">DATA STRUCTURES</p>
+          <h1>Binary Search Tree</h1>
+        </div>
+        <span id="statusText" class="status-pill balanced">Árbol equilibrado</span>
+      </header>
+
+      <section class="control-bar" aria-label="Controles del árbol">
+        <div class="value-controls">
+          <label for="valueInput">Valor</label>
+          <input id="valueInput" type="number" placeholder="Ej. 42" />
+          <button id="insertButton" class="button primary" type="button">Insert</button>
+          <button id="deleteButton" class="button secondary" type="button">Delete</button>
+        </div>
+
+        <div class="array-controls">
+          <label for="arrayInput">Array personalizado</label>
+          <input id="arrayInput" type="text" placeholder="1, 7, 4, 23, 8" />
+          <button id="buildButton" class="icon-button" type="button" title="Crear árbol" aria-label="Crear árbol">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+
+        <div class="actions">
+          <button id="rebalanceButton" class="button secondary" type="button">Reequilibrar</button>
+          <button id="randomButton" class="button ghost" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 1l4 4-4 4V6H7a5 5 0 0 0-5 5H0a7 7 0 0 1 7-7h10V1zm-10 14H3l4 4-4 4v-3h10a7 7 0 0 0 7-7h-2a5 5 0 0 1-5 5H7v-3z"/></svg>
+            Aleatorio
+          </button>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel tree-panel">
+          <div class="panel-heading">
+            <h2>Visualización</h2>
+            <span>Haz clic en un nodo para usar su valor</span>
+          </div>
+          <div class="tree-scroll">
+            <div id="treeCanvas" class="tree-canvas"></div>
+          </div>
+        </article>
+
+        <aside class="panel traversal-panel">
+          <div class="panel-heading">
+            <h2>Recorridos</h2>
+          </div>
+          <div id="traversalResults"></div>
+        </aside>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
